@@ -7,7 +7,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "watch": "browser-sync public --watch public/script.js"
+    "watch": "browser-sync docs --watch docs/index.html"
   },
   "repository": {
     "type": "git",

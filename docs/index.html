@@ -32,30 +32,25 @@
     <p>If a particular frame doesn't render ( white block ) or renders a green square, that filter method is broken in this browser :(</p>
     <div class="container">
         <div class="item">
-            <h2>Relative SRC w/ SVG Filter</h2>
+            <h2>Relative <code>iframe</code> src attribute w/ inline SVG Filter</h2>
             <iframe class="filter-deuteranopia" src="green-square.html" ></iframe>
         </div>
         <div class="item">
-            <h2>External SRC w/ SVG Filter</h2>
+            <h2>External <code>iframe</code> src attribute w/ inline SVG Filter</h2>
             <iframe class="filter-deuteranopia" src="https://www.youtube.com/embed/_BUETQFvcPg" ></iframe>
         </div>
         <div class="item">
-            <h2>SRCDOC w/ SVG Filter</h2>
-            <iframe class="filter-deuteranopia" srcdoc="<div width="150" height="150" style="background-color: #00ff00"></div></iframe>
+            <h2><code>iframe</code> srcdoc attribute w/ inline SVG Filter</h2>
+            <iframe class="filter-deuteranopia" srcdoc="<div width="150" height="150" style="background-color: #00ff00"></iframe>
         </div>
 
         <div class="item">
-            <h2>SRCDOC w/ Greyscale CSS Filter</h2>
+            <h2><code>iframe</code> srcdoc attribute w/ Greyscale CSS Filter</h2>
             <iframe class="filter-grayscale" srcdoc="<div width="150" height="150" style="background-color: #00ff00" ></iframe>
         </div>
 
         <div class="item">
-            <h2>SRCDOC Inline w/ SVG Filter</h2>
-            <iframe class="filter-deuteranopia" srcdoc="<div width="150" height="150" style="background-color: #00ff00" ></iframe>
-        </div>
-
-        <div class="item">
-            <h2>SRCDOC External w/ SVG Filter</h2>
+            <h2><code>iframe</code> srcdoc attribute w/ external SVG Filter</h2>
             <iframe class="external-filter" srcdoc="<div width="150" height="150" style="background-color: #00ff00" ></iframe>
         </div>
     </div>
