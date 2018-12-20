@@ -1,0 +1,23 @@
+{
+  "name": "bug-safari-iframe-svgfilter",
+  "version": "1.0.0",
+  "description": "Applying SVG filter to iframe with src attribute doesn't work in Safari.",
+  "dependencies": {
+    "browser-sync": "^2.26.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "watch": "browser-sync public --watch public/script.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adamzerella/bug-safari-iframe-svgfilter.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adamzerella/bug-safari-iframe-svgfilter/issues"
+  },
+  "homepage": "https://github.com/adamzerella/bug-safari-iframe-svgfilter#readme"
+}

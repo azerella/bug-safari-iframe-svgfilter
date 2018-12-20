@@ -1,0 +1,62 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+.filter-grayscale {
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+}
+
+.filter-deuteranopia {
+    filter: url( '#deuteranopia' );
+    -webkit-filter: url( '#deuteranopia' );
+}
+
+.external-filter {
+    filter: url( 'external-filter.svg#external-deuteranopia' );
+    -webkit-filter: url( './external-filter.svg#external-deuteranopia' );
+}
+
+.container {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.item {
+    padding: 1rem;
+}
+
+iframe {
+    border: 0;
+}
+
+/* Medium screens */
+@media all and (max-width: 800px) {
+    .navigation {
+      /* When on medium sized screens, we center it by evenly distributing empty space around items */
+      justify-content: space-around;
+    }
+}
+  
+  /* Small screens */
+  @media all and (max-width: 500px) {
+    .navigation {
+      /* On small screens, we are no longer using row direction but column */
+      flex-direction: column;
+    }
+}
+
+.hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}

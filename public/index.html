@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bitemser - Inline SVG iframe filters</title>
+    <link rel="stylesheet" href="main.css"></link>
+</head>
+<body>
+    <svg
+        class="hidden"
+        xmlns="http://www.w3.org/2000/svg"
+        version="1.1"
+    >
+    <defs>
+    <filter id="deuteranopia">
+        <feColorMatrix
+            in="SourceGraphic"
+            type="matrix"
+            values="0.625, 0.375, 0,   0, 0
+                    0.7,   0.3,   0,   0, 0
+                    0,     0.3,   0.7, 0, 0
+                    0,     0,     0,   1, 0"
+        />
+        </filter>
+    </defs>
+    </svg>
+    <h1>Browser Preview: <code>iframe</code> Filters</h1>
+    <p>Below is a preview of various <code>iframe</code> elements with different filters applied to them.</p>
+    <p>If a particular frame doesn't render ( white block ) or renders a green square, that filter method is broken in this browser :(</p>
+    <div class="container">
+        <div class="item">
+            <h2>Relative SRC w/ SVG Filter</h2>
+            <iframe class="filter-deuteranopia" src="green-square.html" ></iframe>
+        </div>
+        <div class="item">
+            <h2>External SRC w/ SVG Filter</h2>
+            <iframe class="filter-deuteranopia" src="https://www.youtube.com/embed/_BUETQFvcPg" ></iframe>
+        </div>
+        <div class="item">
+            <h2>SRCDOC w/ SVG Filter</h2>
+            <iframe class="filter-deuteranopia" srcdoc="<div width="150" height="150" style="background-color: #00ff00"></div></iframe>
+        </div>
+
+        <div class="item">
+            <h2>SRCDOC w/ Greyscale CSS Filter</h2>
+            <iframe class="filter-grayscale" srcdoc="<div width="150" height="150" style="background-color: #00ff00" ></iframe>
+        </div>
+
+        <div class="item">
+            <h2>SRCDOC Inline w/ SVG Filter</h2>
+            <iframe class="filter-deuteranopia" srcdoc="<div width="150" height="150" style="background-color: #00ff00" ></iframe>
+        </div>
+
+        <div class="item">
+            <h2>SRCDOC External w/ SVG Filter</h2>
+            <iframe class="external-filter" srcdoc="<div width="150" height="150" style="background-color: #00ff00" ></iframe>
+        </div>
+    </div>
+</body>
+</html>
